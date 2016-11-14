@@ -129,5 +129,34 @@ cat3.products.create!({
   price: 2_483.75
 })
 
+User.create!({
+  id: 1,
+  first_name: "Guy",
+  last_name: "Booth",
+  email: "guy@guy",
+  password_digest: "No Bueno"
+})
+
+User.create!({
+  id: 2,
+  first_name: "Benno",
+  last_name: "Booth",
+  email: "ben@ben",
+  password_digest: "No Bueno mucho"
+})
+
+Review.create!({
+  user_id: 1,
+  product_id: 12,
+  description: "It's the best shelf ever!",
+  rating: 5
+})
+
+Review.create!({
+  user_id: 1,
+  product_id: 12,
+  description: "Was missing all the pieces! How am I supposed to build it??",
+  rating: 1
+})
 
 puts "DONE!"

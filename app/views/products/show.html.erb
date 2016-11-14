@@ -29,3 +29,23 @@
   </article>
 
 </section>
+
+<section class="reviews-show">
+
+  <h2 class="reviews-header">
+    Reviews
+  </h2>
+
+  <% if current_user %>
+    <%= form_for [@product, @review] do |f|%>
+      <%= f.text_area :description %>
+      <%= f.select(:rating, [1, 2, 3, 4, 5]) %>
+      <%= f.submit 'Add review'%>
+    <% end %>
+  <% end %>
+
+  <div>
+    <%= render 'reviews', reviews: @review %>
+  </div>
+
+</section>

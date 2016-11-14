@@ -10,6 +10,10 @@ Rails.application.routes.draw do
     delete :remove_item
   end
 
+  resources :products, only: [:index, :show] do
+    resources :reviews, only: [:create, :destroy]
+  end
+
   get '/signup' => 'users#new'
   post '/users' => 'users#create'
 
