@@ -130,7 +130,6 @@ cat3.products.create!({
 })
 
 User.create!({
-  id: 1,
   first_name: "Guy",
   last_name: "Booth",
   email: "guy@guy",
@@ -138,7 +137,6 @@ User.create!({
 })
 
 User.create!({
-  id: 2,
   first_name: "Benno",
   last_name: "Booth",
   email: "ben@ben",

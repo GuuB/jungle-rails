@@ -1,0 +1,2 @@
+module ApplicationController
+end
